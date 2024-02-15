@@ -22,3 +22,7 @@ title: Home
 Feel free to [contact me](mailto:judz1105@gmail.com) if you have any quesitons or would like to collaborate.
 
 *:wq*
+
+---
+
+![Cherub](/img/ornate.png)
