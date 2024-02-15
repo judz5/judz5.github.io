@@ -6,7 +6,7 @@ permalink: /about/
 
 
 {:refdef: style="text-align: center;"}
-![Winston & Judson](/img/me.png){: width="{{ site.img_width }}" style="max-width: 80%;border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);" }
+![Winston & Judson](/img/me.png){: width="{{ site.img_width }}" style="max-width: 60%;border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);" }
 {: refdef}
 
 ## Hi! 
