@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Welcome"
+date:   2024-02-14 11:58:59 -0600
+categories: me
+---
+
+Welcome to my website! I wanted a place I could document some projects ive been working on, thanks to jekyll and github pages thats not very hard.
+
+Stay tuned for whatever I decide to post.
+
+
+
