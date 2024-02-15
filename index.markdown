@@ -9,19 +9,15 @@ title: Home
 ---
 
 ## Welcome to my website!
-
 - Learn some more [about]({% link about.markdown %}) me, or check out my [blog]({% link blog/index.markdown %})
 
 ## Recent Blog Posts
 {% for post in site.posts limit:5 %}
-[{{ post.title }}]({{ post.url }})
-{{ post.exceprt }}
+- [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
 ## Contact Me
-Feel free to [contact me](mailto:judz1105@gmail.com) if you have any quesitons or would like to collaborate.
-
-*:wq*
+- Feel free to [contact me](mailto:judz1105@gmail.com) if you have any quesitons or would like to collaborate.
 
 ---
 
