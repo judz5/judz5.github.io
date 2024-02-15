@@ -24,11 +24,23 @@ description: >- # this means to ignore newlines until "baseurl:"
   Judson Salinas' Blog and Portfolio
 # baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://judz5.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: judson_salinas
-github_username:  judz5
+#twitter_username: judson_salinas
+#github_username:  judz5
+
+author:
+  name: Judson Salinas
+  email: "judz1105@gmail.com"
 
 # Build settings
-theme: minima 
+remote_theme: jekyll/minima 
+minima:
+  skin: dark
+  social_links:
+  - { platform: github, user_url: "https://github.com/judz5"}
+  - { platform: linkedin, user_url: "https://www.linkedin.com/in/judson5salinas/"}
+  - { platform: twitter, user_url: "https://twitter.com/Judson_salinas"}
+  - { platform: instagram, user_url: "https://www.instagram.com/j.udz/"}
+  - { platform: stackoverflow, user_url: "https://stackoverflow.com/users/14944923/judz"}
 plugins:
   - jekyll-feed
 
