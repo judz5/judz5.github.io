@@ -6,8 +6,6 @@ layout: page
 title: Home
 ---
 
----
-
 ## Welcome to my website!
 - Learn some more [about]({% link about.markdown %}) me, or check out my [blog]({% link blog/index.markdown %})
 
@@ -19,6 +17,3 @@ title: Home
 ## Contact Me
 - Feel free to [contact me](mailto:judz1105@gmail.com) if you have any quesitons or would like to collaborate.
 
----
-
-![Cherub](/img/ornate.png)
