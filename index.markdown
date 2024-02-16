@@ -6,7 +6,7 @@ layout: page
 title: Home
 ---
 
-## Welcome to my website!
+## Welcome to *judz.net*
 - Learn some more [about]({% link about.markdown %}) me, or check out my [blog]({% link blog/index.markdown %})
 
 ## Recent Blog Posts
