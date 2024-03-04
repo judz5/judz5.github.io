@@ -18,7 +18,7 @@ The best part is it can be completely wireless with a PiSugar battery for travel
 
 ## How Handshakes Work
 
-Most networks run on WPA/WPA2 Wireless protocol. If I was a laptop, applying for a job at a WPA WiFi access point, the first thing I would have to do is shake the boss's hand 4 times. This is called the 4-way Handshake. While shaking my boss's hand I would exchange 4 packets with him, and in those packets there would be very secret information about our super secure password. Those packets are what the pwnagotchi lives for. 
+Most networks run on WPA/WPA2 Wireless protocol. If I was a laptop, applying for a job at a WPA WiFi access point, the first thing I would have to do is shake the boss's hand 4 times. This is called the 4-way Handshake. While shaking my boss's hand I would exchange 4 packets with him, and in those packets there would be very secret information about our super secure password. Those packets are what the Pwnagotchi eats.
 
 {:refdef: style="max-width: 60%"; items-align: center;}
 ![](/img/wpa.png)
