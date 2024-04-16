@@ -11,7 +11,7 @@ permalink: /about/
 
 ## Hi! 
 
-My name is Judson Salinas, and that's Winston (*to be clear I am the one on the right*). Welcome to my website, where I'll document some of my projects and share my experiences in Computer Science.
+I'm Judson, and that's Winston (*to be clear I am the one on the right*). Welcome to my website, where I'll document some of my projects and share my experiences in Computer Science.
 
 I'm currently a sophomore at Texas A&M studying Computer Science. At the moment, I'm **very** interested in cybersecurity, specifically Networking and InfoSec. I love working with physical hacking gadgets and can't wait to share some of my recent projects. I'm also very passionate about software development, and am excited to find my place in the professional field, whether thats in cybersecurity, software engineering, or something I haven't discovered yet.
 
