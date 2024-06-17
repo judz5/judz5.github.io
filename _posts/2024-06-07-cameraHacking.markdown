@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Web-acceessible Camera Dorking"
-date:   2024-06-07
+date:   2024-06-17
 categories: WiFi_Security
 ---
 
