@@ -1,0 +1,66 @@
+---
+layout: base
+---
+
+<div class="home">
+    {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+    {% if site.paginate %}
+    {% assign projects = paginator.projects %}
+    {% else %}
+    {% assign projects = site.projects %}
+    {% endif %}
+
+    {%- if projects.size > 0 -%}
+    {%- if page.list_title -%}
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+        {%- for project in projects -%}
+        <li>
+            <span class="post-meta">{{ project.description | escape }}</span>
+
+            <h3>
+                <a class="post-link" href="{{ project.url | relative_url }}">
+                    {{ project.title | escape }}
+                </a>
+            </h3>
+            <!-- Show project description instead -->
+            <!-- <p>{{ project.description | escape }}</p> -->
+        </li>
+        {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+    <div class="pager">
+        <ul class="pagination">
+            {%- if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{
+                    paginator.previous_page }}</a></li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">•</div>
+            </li>
+            {%- endif %}
+            <li>
+                <div class="current-page">{{ paginator.page }}</div>
+            </li>
+            {%- if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a>
+            </li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">•</div>
+            </li>
+            {%- endif %}
+        </ul>
+    </div>
+    {%- endif %}
+
+    {%- endif -%}
+
+</div>

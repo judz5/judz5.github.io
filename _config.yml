@@ -38,9 +38,7 @@ minima:
   social_links:
   - { platform: github, user_url: "https://github.com/judz5"}
   - { platform: linkedin, user_url: "https://www.linkedin.com/in/judson5salinas/"}
-  - { platform: twitter, user_url: "https://twitter.com/Judson_salinas"}
   - { platform: instagram, user_url: "https://www.instagram.com/j.udz/"}
-  - { platform: stackoverflow, user_url: "https://stackoverflow.com/users/14944923/judz"}
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -48,8 +46,13 @@ plugins:
 header_pages:
   - about.markdown
   - blog/index.markdown
-  - projects.markdown
+  - projects/index.markdown
   - index.markdown
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
