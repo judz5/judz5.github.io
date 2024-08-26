@@ -7,7 +7,7 @@ title: Home
 ---
 
 ## Welcome to *judz.net*
-- Learn some more [about]({% link about.markdown %}) me, or check out my [blog]({% link blog/index.markdown %})
+- Learn some more [about]({% link about.markdown %}) me, explore my [projects]({% link projects/index.markdown %}), or check out my [blog]({% link blog/index.markdown %}). 
 
 ## Recent Blog Posts
 {% for post in site.posts limit:5 %}
