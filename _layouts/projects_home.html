@@ -12,7 +12,7 @@ layout: base
     {% if site.paginate %}
     {% assign projects = paginator.projects %}
     {% else %}
-    {% assign projects = site.projects %}
+    {% assign projects = site.projects | sort: 'year' | reverse %}
     {% endif %}
 
     {%- if projects.size > 0 -%}
@@ -22,7 +22,7 @@ layout: base
     <ul class="post-list">
         {%- for project in projects -%}
         <li>
-            <span class="post-meta">{{ project.description | escape }}</span>
+            <span class="post-meta">{{ project.year }} • {{ project.description | escape }}</span>
 
             <h3>
                 <a class="post-link" href="{{ project.url | relative_url }}">
