@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 12thManTechPickup
-description: Python Pickup Managment system w/Django
+description: Pickup Managment System in Django
 year: 2023
 ---
 
