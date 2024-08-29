@@ -34,3 +34,7 @@ Hop #1: 192.168.1.1, City1, Region1, Country1
 Hop #2: 10.0.0.1, City2, Region2, Country2
 Hop #3: 203.0.113.1, City3, Region3, Country3
 ```
+
+---
+
+<img src="/img/GeoTrace_map.png" alt="GeoTrace Map" style="max-width=100%; height: auto;">
