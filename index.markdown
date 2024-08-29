@@ -10,8 +10,14 @@ title: Home
 - Learn some more [about]({% link about.markdown %}) me, explore my [projects]({% link projects/index.markdown %}), or check out my [blog]({% link blog/index.markdown %}). 
 
 ## Recent Blog Posts
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:3 %}
 - [{{ post.title }}]({{ post.url }})
+{% endfor %}
+
+## Recent Projects
+{% assign sorted_projects = site.projects | sort: 'year' | reverse %}
+{% for project in sorted_projects limit:3 %}
+- [{{ project.title }}]({{ project.url }})
 {% endfor %}
 
 ## Contact Me
