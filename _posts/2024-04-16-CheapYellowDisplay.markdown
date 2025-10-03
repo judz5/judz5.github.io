@@ -2,7 +2,7 @@
 layout: post
 title:  "Cheap Yellow Marauder"
 date:   2024-04-16
-categories: WiFi_Security
+categories: Cybersecurity
 ---
 
 Hi!

@@ -4,17 +4,20 @@ title: About
 permalink: /about/
 ---
 
+<figure style="text-align: center; margin: 2rem auto;">
+  <img src="/img/horse.png" 
+       alt="Me and Some French Horses!" 
+       style="display: block; margin: 0 auto 0.5rem auto; max-width: 80%; height: auto;">
+  <figcaption style="font-size: 0.85rem; color: #666; font-style: italic;">
+    Pictured left to right: Judson, Horse, Horse, Horse
+  </figcaption>
+</figure>
 
-{:refdef: style="text-align: center;"}
-![Winston & Judson](/img/me.png){: width="{{ site.img_width }}" style="max-width: 60%;border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);" }
-{: refdef}
 
-## Hi! 
+## Hi, I'm Judson 
 
-I'm Judson, and that's Winston (*to be clear I am the one on the right*). Welcome to my website, where I'll document some of my projects and share my experiences in Computer Science.
+I’m currently a senior at Texas A&M studying Computer Science and Cybersecurity. More than anything, **I like understanding how things work**. Whether it’s dialing in my bike, troubleshooting my Subaru, or pulling apart an old CRT, I just like figuring stuff out. 
 
-I'm currently a junior at Texas A&M studying Computer Science. At the moment, I'm **very** interested in cybersecurity, I love working with physical hacking gadgets and can't wait to share some of my recent projects. I'm also very passionate about software development, and am excited to find my place in the professional field, whether thats in cybersecurity, software engineering, or something I haven't discovered yet.
+I’m into technology, photography, bikes, cars, and anything that’s built with a sense of purpose. I appreciate clean design, good engineering, and things that just work. 
 
-Some other passions of mine include cars, Runescape, guitars, music, and photography. I love to learn new things and am always looking for a new challenge. In my free time, you can often find me exploring random buildings or pondering in mysterious locations. 
-
-Hope you enjoy my site!
+This site is a mix of projects, experiments, and whatever else I find cool. Enjoy!
