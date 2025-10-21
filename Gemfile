@@ -15,6 +15,7 @@ gem "minima", "~> 2.5"
 gem "github-pages", "~> 230", group: :jekyll_plugins
 # If you have any plugins, put them here!
 
+gem "openssl"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"

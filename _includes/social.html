@@ -1,0 +1,19 @@
+<ul class="social-media-list">
+    {%- if site.github_username -%}
+    <li>
+        <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}" target="_blank"
+            class="social-link">
+            GitHub
+        </a>
+    </li>
+    {%- endif -%}
+
+    {%- if site.linkedin_username -%}
+    <li>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape | escape }}" target="_blank"
+            class="social-link">
+            LinkedIn
+        </a>
+    </li>
+    {%- endif -%}
+</ul>
