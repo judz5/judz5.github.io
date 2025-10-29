@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "1996 Klein Quantum II"
+title:  "1996 Klein Quantum II Conversion"
 date:   2025-10-27
 categories: Bikes
 tags: [fixed-gear, build, fixed-conversion]
