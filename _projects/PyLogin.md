@@ -3,6 +3,11 @@ layout: post
 title: PyLogin
 description: Python Login Bot, and NodeJS Login Page
 year: 2022
+tags:
+  - Python
+  - Node.js
+  - Web App
+  - Automation
 ---
 
 ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -65,5 +70,3 @@ once you have the site running and some accounts registered you can just do
     $ python3 loginBot.py 
 
 this will run the python script and give you a list of all found login credientials from the site.
-
-

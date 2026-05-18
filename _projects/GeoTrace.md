@@ -3,6 +3,9 @@ layout: post
 title: GeoTrace
 description: Geolocation Traceroute tool in Python
 year: 2024
+tags:
+  - Python
+  - Networking
 ---
 
      ▄▄ • ▄▄▄ .      ▄▄▄▄▄▄▄▄   ▄▄▄·  ▄▄· ▄▄▄ .

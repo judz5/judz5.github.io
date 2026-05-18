@@ -3,6 +3,9 @@ layout: post
 title: PyManager
 description: Military Grade Python Password Manager
 year: 2024
+tags:
+  - Python
+  - Security
 ---
 
         ____        __  ___
@@ -44,4 +47,3 @@ year: 2024
 https://www.bluespace.tech/blog/evolution-of-password-manager/second-generation-password-manager.html
 
 https://cryptobook.nakov.com/symmetric-key-ciphers/aes-encrypt-decrypt-examples
-

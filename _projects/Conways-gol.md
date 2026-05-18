@@ -3,6 +3,10 @@ layout: post
 title: Conway's Game of Life
 description: Game of Life cellular Automata in C++
 year: 2024
+tags:
+  - C++
+  - SFML
+  - Simulation
 ---
 
 This is an implementation of **Conway's Game of Life** using C++ and SFML. The Game of Life is a cellular automaton created by John Conway.

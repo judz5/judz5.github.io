@@ -2,7 +2,133 @@
 layout: base
 ---
 
-<div class="home">
+<div class="home{% if page.hide_title %} no-page-title{% endif %}">
+    <style>
+        .project-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(9rem, auto);
+            gap: 0.55rem 1rem;
+            align-items: start;
+        }
+
+        .project-item[hidden] {
+            display: none !important;
+        }
+
+        .project-copy {
+            min-width: 0;
+        }
+
+        .post-list .project-title {
+            margin: 0 0 0.16rem;
+        }
+
+        .project-description {
+            margin: 0;
+        }
+
+        .project-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            justify-content: flex-end;
+            margin: 0.18rem 0 0;
+        }
+
+        .project-tag-token {
+            display: inline-flex;
+            align-items: center;
+            min-height: 1.1rem;
+            padding: 0 0.38rem;
+            border: 1px solid #424242;
+            border-radius: 0.2rem;
+            color: #aaa;
+            font-size: 0.68rem;
+            line-height: 1.35;
+            white-space: nowrap;
+        }
+
+        .project-filter {
+            display: grid;
+            gap: 0.65rem;
+            margin: 0.85rem 0 1.35rem;
+        }
+
+        .project-search {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 30rem;
+            padding: 0.42rem 0;
+            border: 0;
+            border-bottom: 1px solid #424242;
+            border-radius: 0;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            line-height: 1.5;
+        }
+
+        .project-search:focus {
+            border-bottom-color: #828282;
+            outline: 0;
+        }
+
+        .project-search::placeholder {
+            color: #828282;
+        }
+
+        .project-tags-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 0.6rem;
+        }
+
+        .project-tag-filter {
+            padding: 0;
+            border: 0;
+            border-bottom: 1px solid transparent;
+            background: transparent;
+            color: #828282;
+            cursor: pointer;
+            font: inherit;
+            font-size: 0.76rem;
+            line-height: 1.4;
+        }
+
+        .project-tag-filter:hover,
+        .project-tag-filter.is-active {
+            border-bottom-color: currentColor;
+            color: inherit;
+        }
+
+        .project-empty {
+            display: none;
+            color: #828282;
+            font-size: 0.92rem;
+        }
+
+        .project-empty.is-visible {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .project-item {
+                grid-template-columns: 1fr;
+                gap: 0.35rem;
+            }
+
+            .project-tags {
+                justify-content: flex-start;
+                margin-top: 0;
+            }
+        }
+
+        .home.no-page-title .project-filter {
+            margin-top: 0;
+        }
+    </style>
+
     {%- unless page.hide_title -%}
     {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -21,17 +147,57 @@ layout: base
     {%- if page.list_title -%}
     <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
+    <div class="project-filter" data-project-filter>
+        <input class="project-search" type="search" placeholder="Search projects" aria-label="Search projects" data-project-search>
+        <div class="project-tags-filter" aria-label="Filter projects by tag">
+            <button class="project-tag-filter is-active" type="button" data-project-tag="all">All</button>
+            {%- assign project_tag_keys = "|" -%}
+            {%- assign project_tag_entries = "" -%}
+            {%- for project in projects -%}
+                {%- for tag in project.tags -%}
+                    {%- assign tag_key = tag | downcase -%}
+                    {%- assign tag_lookup = "|" | append: tag_key | append: "|" -%}
+                    {%- unless project_tag_keys contains tag_lookup -%}
+                        {%- assign project_tag_keys = project_tag_keys | append: tag_key | append: "|" -%}
+                        {%- assign tag_entry = tag_key | append: "::" | append: tag -%}
+                        {%- assign project_tag_entries = project_tag_entries | append: tag_entry | append: "||" -%}
+                    {%- endunless -%}
+                {%- endfor -%}
+            {%- endfor -%}
+            {%- assign sorted_project_tag_entries = project_tag_entries | split: "||" | sort -%}
+            {%- for tag_entry in sorted_project_tag_entries -%}
+                {%- unless tag_entry == "" -%}
+                    {%- assign tag_parts = tag_entry | split: "::" -%}
+                    {%- assign tag_key = tag_parts[0] -%}
+                    {%- assign tag_label = tag_parts[1] -%}
+                    <button class="project-tag-filter" type="button" data-project-tag="{{ tag_key | escape }}">{{ tag_label | escape }}</button>
+                {%- endunless -%}
+            {%- endfor -%}
+        </div>
+    </div>
+    <p class="project-empty" data-project-empty>No projects match that filter.</p>
     <ul class="post-list">
         {%- for project in projects -%}
-        <li>
-            <span class="post-meta">{{ project.year }} • {{ project.description | escape }}</span>
-
-            <h3>
-                <a class="post-link" href="{{ project.url | relative_url }}">
-                    {{ project.title | escape }}
-                </a>
-            </h3>
-            <!-- <p>{{ project.description | escape }}</p> -->
+        <li class="project-item" data-project
+            data-title="{{ project.title | downcase | escape }}"
+            data-tags="|{{ project.tags | join: '|' | downcase | escape }}|"
+            data-description="{{ project.description | downcase | escape }}"
+            data-content="{{ project.content | strip_html | downcase | escape }}">
+            <div class="project-copy">
+                <h3 class="project-title">
+                    <a class="post-link" href="{{ project.url | relative_url }}">
+                        {{ project.title | escape }}
+                    </a>
+                </h3>
+                <p class="post-meta project-description">{{ project.year }} • {{ project.description | escape }}</p>
+            </div>
+            {%- if project.tags and project.tags != empty -%}
+            <div class="project-tags" aria-label="Project tags">
+                {%- for tag in project.tags -%}
+                <span class="project-tag-token">{{ tag | escape }}</span>
+                {%- endfor -%}
+            </div>
+            {%- endif -%}
         </li>
         {%- endfor -%}
     </ul>
@@ -63,5 +229,52 @@ layout: base
     {%- endif %}
 
     {%- endif -%}
+
+    <script>
+        (function () {
+            var root = document.querySelector('[data-project-filter]');
+            if (!root) return;
+
+            var search = root.querySelector('[data-project-search]');
+            var tagButtons = root.querySelectorAll('[data-project-tag]');
+            var projects = document.querySelectorAll('[data-project]');
+            var empty = document.querySelector('[data-project-empty]');
+            var activeTag = 'all';
+
+            function updateProjects() {
+                var query = search.value.trim().toLowerCase();
+                var visibleCount = 0;
+
+                projects.forEach(function (project) {
+                    var title = project.getAttribute('data-title') || '';
+                    var tags = project.getAttribute('data-tags') || '';
+                    var description = project.getAttribute('data-description') || '';
+                    var content = project.getAttribute('data-content') || '';
+                    var matchesTag = activeTag === 'all' || tags.indexOf('|' + activeTag + '|') !== -1;
+                    var matchesSearch = !query || (title + ' ' + tags + ' ' + description + ' ' + content).indexOf(query) !== -1;
+                    var isVisible = matchesTag && matchesSearch;
+
+                    project.hidden = !isVisible;
+                    if (isVisible) visibleCount += 1;
+                });
+
+                if (empty) {
+                    empty.classList.toggle('is-visible', visibleCount === 0);
+                }
+            }
+
+            search.addEventListener('input', updateProjects);
+
+            tagButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    activeTag = button.getAttribute('data-project-tag') || 'all';
+                    tagButtons.forEach(function (item) {
+                        item.classList.toggle('is-active', item === button);
+                    });
+                    updateProjects();
+                });
+            });
+        }());
+    </script>
 
 </div>

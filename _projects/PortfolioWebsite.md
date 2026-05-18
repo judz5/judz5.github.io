@@ -3,6 +3,9 @@ layout: post
 title: Portfolio Website
 description: My Non-Jekyll (HTML/CSS) Portfolio website.
 year: 2024
+tags:
+  - HTML/CSS
+  - Portfolio
 ---
 
 ### CSCE331 Project 1

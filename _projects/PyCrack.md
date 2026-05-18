@@ -3,6 +3,10 @@ layout: post
 title: PyCrack
 description: Python Password Cracker
 year: 2022
+tags:
+  - Python
+  - Security
+  - Cryptography
 ---
 
         ██▓███ ▓██   ██▓ ▄████▄   ██▀███   ▄▄▄       ▄████▄   ██ ▄█▀
@@ -58,5 +62,3 @@ year: 2022
 If you want to use the rockyou.txt dictionary, you have to re-encode it to UTF-8 As there is formatting errors in the file.
 
         iconv -f ISO-8859-1 -t UTF-8 rockyou.txt > rockyou_utf8.txt
-
-

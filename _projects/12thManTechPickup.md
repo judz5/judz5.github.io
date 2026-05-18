@@ -3,6 +3,10 @@ layout: post
 title: 12thManTechPickup
 description: Pickup Managment System in Django
 year: 2023
+tags:
+  - Python
+  - Django
+  - Web App
 ---
 
 ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)

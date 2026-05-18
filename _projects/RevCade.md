@@ -3,6 +3,10 @@ layout: post
 title: RevCade
 description: Reveille Themed PyGame Arcade
 year: 2022
+tags:
+  - Python
+  - PyGame
+  - Game
 ---
 
 ### 2022 ENGR 102 FINAL PROJECT
