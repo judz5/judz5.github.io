@@ -2,7 +2,7 @@
 layout: post
 title:  "WiFi Hacking with Silly Faces"
 date:   2024-02-14 11:58:59 -0600
-categories: WiFi_Security
+categories: Cybersecurity
 ---
 
 ## The Pwnagotchi

@@ -1,0 +1,237 @@
+---
+layout: base
+---
+
+<div class="home{% if page.hide_title %} no-page-title{% endif %}">
+  <style>
+    .post-meta-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.55rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .post-categories {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .post-category-token {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.1rem;
+      padding: 0 0.38rem;
+      border: 1px solid #424242;
+      border-radius: 0.2rem;
+      color: #aaa;
+      font-size: 0.68rem;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    .blog-filter {
+      display: grid;
+      gap: 0.65rem;
+      margin: 0.85rem 0 1.35rem;
+    }
+
+    .blog-search {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 30rem;
+      padding: 0.42rem 0;
+      border: 0;
+      border-bottom: 1px solid #424242;
+      border-radius: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      line-height: 1.5;
+    }
+
+    .blog-search:focus {
+      border-bottom-color: #828282;
+      outline: 0;
+    }
+
+    .blog-search::placeholder {
+      color: #828282;
+    }
+
+    .blog-categories-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.6rem;
+    }
+
+    .blog-category-filter {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid transparent;
+      background: transparent;
+      color: #828282;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+
+    .blog-category-filter:hover,
+    .blog-category-filter.is-active {
+      border-bottom-color: currentColor;
+      color: inherit;
+    }
+
+    .blog-empty {
+      display: none;
+      color: #828282;
+      font-size: 0.92rem;
+    }
+
+    .blog-empty.is-visible {
+      display: block;
+    }
+
+    .home.no-page-title .blog-filter {
+      margin-top: 0;
+    }
+  </style>
+
+  {%- unless page.hide_title -%}
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+  {%- endunless -%}
+
+  {{ content }}
+
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+  {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    {%- if page.title == "Blog" -%}
+      <div class="blog-filter" data-blog-filter>
+        <input class="blog-search" type="search" placeholder="Search posts" aria-label="Search posts" data-blog-search>
+        <div class="blog-categories-filter" aria-label="Filter posts by category">
+          <button class="blog-category-filter is-active" type="button" data-blog-category="all">All</button>
+          {%- assign sorted_categories = site.categories | sort -%}
+          {%- for category in sorted_categories -%}
+            {%- assign category_name = category | first -%}
+            <button class="blog-category-filter" type="button" data-blog-category="{{ category_name | downcase | escape }}">{{ category_name | escape }}</button>
+          {%- endfor -%}
+        </div>
+      </div>
+      <p class="blog-empty" data-blog-empty>No posts match that filter.</p>
+    {%- endif -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li data-blog-post
+          data-title="{{ post.title | downcase | escape }}"
+          data-categories="|{{ post.categories | join: '|' | downcase | escape }}|"
+          data-excerpt="{{ post.excerpt | strip_html | downcase | escape }}">
+        {%- assign post_categories = post.categories -%}
+        <div class="post-meta-row">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {%- if post_categories and post_categories != empty -%}
+            <span class="post-categories" aria-label="Post categories">
+              {%- for category in post_categories -%}
+                <span class="post-category-token">{{ category | escape }}</span>
+              {%- endfor -%}
+            </span>
+          {%- endif -%}
+        </div>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.minima.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Go to Page {{ paginator.previous_page }}">
+              {{ paginator.previous_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">.</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Go to Page {{ paginator.next_page }}">
+              {{ paginator.next_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">.</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+  {%- endif -%}
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-blog-filter]');
+      if (!root) return;
+
+      var search = root.querySelector('[data-blog-search]');
+      var categoryButtons = root.querySelectorAll('[data-blog-category]');
+      var posts = document.querySelectorAll('[data-blog-post]');
+      var empty = document.querySelector('[data-blog-empty]');
+      var activeCategory = 'all';
+
+      function updatePosts() {
+        var query = search.value.trim().toLowerCase();
+        var visibleCount = 0;
+
+        posts.forEach(function (post) {
+          var title = post.getAttribute('data-title') || '';
+          var categories = post.getAttribute('data-categories') || '';
+          var excerpt = post.getAttribute('data-excerpt') || '';
+          var matchesCategory = activeCategory === 'all' || categories.indexOf('|' + activeCategory + '|') !== -1;
+          var matchesSearch = !query || (title + ' ' + categories + ' ' + excerpt).indexOf(query) !== -1;
+          var isVisible = matchesCategory && matchesSearch;
+
+          post.hidden = !isVisible;
+          if (isVisible) visibleCount += 1;
+        });
+
+        if (empty) {
+          empty.classList.toggle('is-visible', visibleCount === 0);
+        }
+      }
+
+      search.addEventListener('input', updatePosts);
+
+      categoryButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          activeCategory = button.getAttribute('data-blog-category') || 'all';
+          categoryButtons.forEach(function (item) {
+            item.classList.toggle('is-active', item === button);
+          });
+          updatePosts();
+        });
+      });
+    }());
+  </script>
+</div>

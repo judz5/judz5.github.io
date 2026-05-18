@@ -2,7 +2,7 @@
 layout: post
 title:  "Breaking AWS Bedrock with BoN"
 date:   2025-10-21
-categories: cybersecurity
+categories: Cybersecurity
 tags: [AI, adversarial-attacks, red-team, blue-team]
 ---
 

@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<article class="post{% if page.hide_title %} no-page-title{% endif %}">
+  <style>
+    .post.no-page-title .post-content > :first-child {
+      margin-top: 0 !important;
+    }
+  </style>
+
+  {%- unless page.hide_title -%}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+  {%- endunless -%}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

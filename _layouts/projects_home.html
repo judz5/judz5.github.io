@@ -3,9 +3,11 @@ layout: base
 ---
 
 <div class="home">
+    {%- unless page.hide_title -%}
     {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
+    {%- endunless -%}
 
     {{ content }}
 

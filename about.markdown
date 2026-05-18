@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+hide_title: true
 permalink: /about/
 ---
 
@@ -20,4 +21,3 @@ I’m a Texas A&M computer science grad interested in security, cloud infrastruc
 I’ve always been pretty hands-on. I like working on software, bikes, cars, hardware, and whatever else I convince myself I can fix.
 
 This site is a mix of projects, write-ups, and whatever else I find cool. Enjoy!
-

@@ -4,6 +4,7 @@
 
 layout: page
 title: Home
+hide_title: true
 ---
 
 ## Welcome to *judz.net*
@@ -23,4 +24,3 @@ title: Home
 
 ## Contact Me
 - Feel free to [contact me](mailto:judz1105@gmail.com) if you have any quesitons or would like to collaborate.
-
