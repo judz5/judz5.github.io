@@ -10,6 +10,7 @@ hide_title: true
 ## Welcome to *judz.net*
 - Learn some more [about]({% link about.markdown %}) me, view my [resume]({{ site.baseurl }}/files/Salinas_Judson_Resume.pdf),
  explore my [projects]({% link projects/index.markdown %}), or check out my [blog]({% link blog/index.markdown %}). 
+- You can also find me on [Github](https://github.com/judz5), or [LinkedIn](https://www.linkedin.com/in/judz/).
 
 ## Recent Blog Posts
 {% for post in site.posts limit:3 %}
