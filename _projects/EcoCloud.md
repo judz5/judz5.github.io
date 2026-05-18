@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: EcoCloud
 description: discover, visualize, and reduce cloud computing emissions.
 year: 2026

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: PyManager
 description: Military Grade Python Password Manager
 year: 2024

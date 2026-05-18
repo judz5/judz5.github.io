@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: 12thManTechPickup
 description: Pickup Managment System in Django
 year: 2023

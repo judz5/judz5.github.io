@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: Boids
 description: Basic Boid Automata in C++
 year: 2024

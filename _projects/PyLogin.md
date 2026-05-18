@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: PyLogin
 description: Python Login Bot, and NodeJS Login Page
 year: 2022

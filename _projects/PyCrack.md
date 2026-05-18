@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: PyCrack
 description: Python Password Cracker
 year: 2022

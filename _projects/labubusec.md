@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: LabubuSec
 description: ML malware detector for Adversial Windows PE files
 year: 2025

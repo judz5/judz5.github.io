@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: PyJump
 description: Python Doodle Jump Clone
 year: 2021

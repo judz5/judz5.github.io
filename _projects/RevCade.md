@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: RevCade
 description: Reveille Themed PyGame Arcade
 year: 2022

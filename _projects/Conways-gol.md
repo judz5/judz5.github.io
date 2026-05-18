@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project_post
 title: Conway's Game of Life
 description: Game of Life cellular Automata in C++
 year: 2024
