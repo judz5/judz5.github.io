@@ -16,8 +16,8 @@ permalink: /about/
 
 ## Hi, I'm Judson 
 
-I’m currently a senior at Texas A&M studying Computer Science and Cybersecurity. More than anything, **I like understanding how things work**. Whether it’s dialing in my bike, troubleshooting my Subaru, or pulling apart an old CRT, I just like figuring stuff out. 
+I’m a Texas A&M computer science grad interested in security, cloud infrastructure, agentic systems, and probably too many other things at once. 
+I’ve always been pretty hands-on. I like working on software, bikes, cars, hardware, and whatever else I convince myself I can fix.
 
-I’m into technology, photography, bikes, cars, and anything that’s built with a sense of purpose. I appreciate clean design, good engineering, and things that just work. 
+This site is a mix of projects, write-ups, and whatever else I find cool. Enjoy!
 
-This site is a mix of projects, experiments, and whatever else I find cool. Enjoy!
