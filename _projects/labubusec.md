@@ -34,9 +34,7 @@ tags:
   title="LabubuSec final presentation PDF">
 </iframe>
 
----
-
-LabubuSec was a malware detection project focused on using machine learning to classify Windows PE files as benign or malicious, including adversarial PEs.
+**LabubuSec** was a malware detection project focused on using machine learning to classify Windows PE files as benign or malicious, including adversarial PEs.
 
 ### Overview
 

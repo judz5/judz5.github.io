@@ -16,9 +16,6 @@ tags:
           /____/                         /____/
 
 
-![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
-
 [PyManager](https://github.com/judz5/PyManager) is a secure and easy to use password managment application written in Python. Passwords are encypted using AES-256, with Password-Based Key Derivation for ultimate security. Data is stored with sqlite for ease of setup and use.
 
 ## Setup

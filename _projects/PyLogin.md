@@ -10,28 +10,9 @@ tags:
   - Automation
 ---
 
-![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
-![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
-![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-
-### 2022 CSHS Cybersecurity
+## 2022 CSHS Cybersecurity
 
 [PyLogin](https://github.com/judz5/pylogin) is a Python Webscraping Login Bot, and NodeJS / MySQL Login page
-
-## Rubric (50/50)
-
-- [x] Writeup: Research (15)
-
-- [x] Writeup: Works Cited (5)
-
-- [x] Presentation: Well-designed slides (10)
-
-- [x] Presentation: Engaging, does not read off slides (5)
-
-- [x] Presentation: Responds to questions well (5)
-
-- [x] Demonstration of Program (10)
 
 ## Write-up
 
