@@ -2,7 +2,7 @@
 layout: project_post
 title: PyManager
 description: Military Grade Python Password Manager
-year: 2024
+year: 2022
 tags:
   - Python
   - Security
